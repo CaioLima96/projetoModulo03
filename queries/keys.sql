@@ -10,10 +10,13 @@ ALTER TABLE parts
 ADD PRIMARY KEY (part_num);
 
 ALTER TABLE sets 
-ADD PRIMARY KEY(set_num);
+	ADD PRIMARY KEY(set_num);
   
-  ALTER  TABLE part_categories
+ALTER  TABLE part_categories
   ADD PRIMARY KEY(id);
+  
+ALTER  TABLE themes
+  ADD PRIMARY KEY(id);  
   
 #Queries chaves estrangeiras
 
