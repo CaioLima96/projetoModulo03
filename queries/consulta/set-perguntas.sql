@@ -1,24 +1,24 @@
 # Quais são e quantos sets de um "personagem" tem? -- aqui não quero o set_num, mas só consegui ir quando coloquei no group by, pq?
-select set_num, `name`,count(name) as 'qtd_set' from sets group by `name`, set_num having `name` like '%mcdonald%';
+select set_num as 'set_id', `name` as 'set_nome',count(name) as 'qtd_set' from sets group by `name`, set_num having `name` like '%mcdonald%' limit 0,20;
 
 
 # Qual set se repete?
-select set_num, `name`, count(year) as qtd_sets from sets group by set_num having count(set_num) >= 2;
+select set_num as 'set_id', `name` as 'set_nome', count(year) as qtd_sets from sets group by set_num having count(set_num) >= 2 limit 0,20;
 
 
 # Rank dos sets por quantidade de peças crescente ou decrecente. #item com -1 na quantidad de pecas
-select name, num_parts as 'qtd_peças' from sets order by num_parts desc;
-select name, num_parts as 'qtd_peças' from sets order by num_parts asc;
+select name as 'set_nome', num_parts as 'qtd_peças' from sets order by num_parts desc limit 0,20;
+select name as 'set_nome', num_parts as 'qtd_peças' from sets order by num_parts asc limit 0,20;
 
 
 
-#Qual set possui mais peça? -- Também não consegui colocar o nome aqui
-select `name`, max(sets.num_parts) as 'qtd_maxima_peças' from sets group by set_num;
+#Qual set possui mais peça? -- Com a col de nome, nao retorna o valor maximo
+select `name`as 'set_nome', max(sets.num_parts) as 'qtd_maxima_peças' from sets group by set_num limit 0,20;
 
 
 #Quantas peças tal set possui?
-select name, num_parts from sets where name like '%weetabix%' order by num_parts asc;
-select name, num_parts from sets where name like '%weetabix%' order by num_parts desc;
+select name as 'set_nome', num_parts as 'set_id' from sets where name like '%weetabix%' order by num_parts asc limit 0,20;
+select name as 'set_nome', num_parts as 'set_id' from sets where name like '%weetabix%' order by num_parts desc limit 0,20;
 
 
 # Qual o id do set, nome, tema e quantos temos no inventário?
@@ -27,4 +27,4 @@ from sets inner join inventory_sets as inv_set
 on sets.set_num = inv_set.inventory_id
 inner join themes as th
 on sets.theme_id = th.id
-group by sets.set_num, sets.name, th.id, th.name order by qtd_set asc;
+group by sets.set_num, sets.name, th.id, th.name order by qtd_set asc limit 0,20;
