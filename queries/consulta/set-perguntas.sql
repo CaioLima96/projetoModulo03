@@ -1,5 +1,5 @@
-# Quais são e quantos sets de um "personagem" tem? -- aqui não quero o set_num, mas só consegui ir quando coloquei no group by, pq?
-select set_num as 'set_id', `name` as 'set_nome',count(name) as 'qtd_set' from sets group by `name`, set_num having `name` like '%mcdonald%' limit 0,20;
+# Quais são e quantos sãos os sets de um "personagem"? -- aqui não quero o set_num, mas só consegui ir quando coloquei no group by, pq?
+select set_num as 'set_id', `name` as 'set_nome',count(name) as 'qtd_set' from sets group by `name`, set_num having `name` like '%mcdonald%' limit 0,10;
 
 
 # Qual set se repete?
@@ -28,3 +28,10 @@ on sets.set_num = inv_set.inventory_id
 inner join themes as th
 on sets.theme_id = th.id
 group by sets.set_num, sets.name, th.id, th.name order by qtd_set asc limit 0,20;
+
+
+# Quais sets são "True Set"?
+select `name`as 'set_nome', num_parts as 'qtd_peças', CASE
+	WHEN num_parts >= 4000 THEN 'Sim'
+    WHEN num_parts < 4000 THEN 'Não'
+end as 'True Set' from sets group by set_num order by num_parts desc limit 0,20;
