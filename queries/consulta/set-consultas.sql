@@ -1,4 +1,4 @@
-##Qual ano produziram mais peças?
+#Qual ano produziram mais peças?
 SELECT name as nome , year as ano, num_parts as numero_de_partes FROM sets ORDER BY num_parts DESC limit 0,20;
 
 # Quais são e quantos sãos os sets de um "personagem"? -- aqui não quero o set_num, mas só consegui ir quando coloquei no group by, pq?
@@ -19,17 +19,17 @@ select `name`as 'set_nome', max(sets.num_parts) as 'qtd_maxima_peças' from sets
 
 
 #Quantas peças tal set possui?
-select name as 'set_nome', num_parts as 'set_id' from sets where name like '%weetabix%' order by num_parts asc limit 0,20;
-select name as 'set_nome', num_parts as 'set_id' from sets where name like '%weetabix%' order by num_parts desc limit 0,20;
+select name as 'set_nome', num_parts as 'qtd_peças' from sets where name like '%weetabix%' order by num_parts asc limit 0,20;
+select name as 'set_nome', num_parts as 'qtd_peças' from sets where name like '%weetabix%' order by num_parts desc limit 0,20;
 
 
-# Qual o id do set, nome, tema e quantos temos no inventário?
+# Qual o id do set, nome, tema (id e nome) e quantos temos no inventário?
 select sets.set_num as 'set_id', sets.name as 'set_nome', sets.theme_id as 'tema_id', th.name as 'tema_nome', sum(inv_set.quantity) as 'qtd_set'
 	from sets inner join inventory_sets as inv_set
 	on sets.set_num = inv_set.inventory_id
 	inner join themes as th
 	on sets.theme_id = th.id
-group by sets.set_num, sets.name, th.id, th.name order by qtd_set asc limit 0,20;
+group by sets.set_num, sets.name, th.id, th.name order by qtd_set desc limit 0,20;
 
 
 # Quais sets são "True Set"?
