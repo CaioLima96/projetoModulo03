@@ -1,5 +1,6 @@
 <h2>Lego Database</h2>
 
+![Logo](https://i.ibb.co/Gvn1vgN/bg1.jpg)
 
 
 ## Sobre o projeto
@@ -7,7 +8,19 @@
 Neste projeto você e sua squad deverão montar um dashboard com base no conjunto de dados escolhidos por vocês, a fim de realizar uma apresentação com a exploração dos dados.
 
 
+
 ## Querys:
+![Trello](https://i.ibb.co/gwqs4Ht/trello.png)
+
+### Exemplo de query respondida:
+
+
+![QUERY](https://i.ibb.co/mTHfP2s/1.jpgg)
+
+## Documentação:
+
+### Modelo de Entidade Relacional:
+![MER](https://i.ibb.co/nMgfGjw/modelo.jpg)
 
 ## Equipe
 
