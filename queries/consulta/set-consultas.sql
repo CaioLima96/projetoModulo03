@@ -1,8 +1,8 @@
 #Qual ano produziram mais peças?
 SELECT name as nome , year as ano, num_parts as numero_de_partes FROM sets ORDER BY num_parts DESC limit 0,20;
 
-# Quais são e quantos sãos os sets de um "personagem"? -- aqui não quero o set_num, mas só consegui ir quando coloquei no group by, pq?
-select set_num as 'set_id', `name` as 'set_nome',count(name) as 'qtd_set' from sets group by `name`, set_num having `name` like '%mcdonald%' limit 0,10;
+# Quais são e quantos sãos os sets de um "personagem"?
+select `name` as 'set_nome',count(name) as 'qtd_set' from sets group by `name`, set_num having `name` like '%mcdonald%' limit 0,10;
 
 
 # Qual set se repete?
@@ -15,7 +15,7 @@ select name as 'set_nome', num_parts as 'qtd_peças' from sets order by num_part
 
 
 #Qual set possui mais peça? -- Com a col de nome, nao retorna o valor maximo
-select `name`as 'set_nome', max(sets.num_parts) as 'qtd_maxima_peças' from sets group by set_num limit 0,20;
+select `name`as 'set_nome', max(sets.num_parts) as 'qtd_maxima_peças' from sets group by set_num;
 
 
 #Quantas peças tal set possui?
