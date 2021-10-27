@@ -10,12 +10,25 @@ Neste projeto você e sua squad deverão montar um dashboard com base no conjunt
 
 
 ## Querys:
+
+-
+-
+-
+-
+-
+
+
+## Trello
+
 ![Trello](https://i.ibb.co/gwqs4Ht/trello.png)
 
-### Exemplo de query respondida:
+
+
+### Exemplos de querys respondidas:
 
 
 ![QUERY](https://i.ibb.co/mTHfP2s/1.jpgg)
+![QUERY](https://i.ibb.co/L9NjzVQ/caio-1.jpg)
 
 ## Documentação:
 
