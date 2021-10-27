@@ -9,26 +9,42 @@ Neste projeto você e sua squad deverão montar um dashboard com base no conjunt
 
 
 
-## Querys:
+## Consultas:
 
--
--
--
--
--
+- Quais e quantos sãos os sets de um "personagem"?
 
+- Quais os temas e seus sets?
+
+- Quais os temas mais usados?
+
+- Quais sets são "True Set"?
+
+- Quais são as cores dos LEGOs "transparentes"?
+
+- Qual o id, nome e tema dos sets e quantos de cada tipo temos no inventário?
+
+- Qual o rank das categorias de partes que mais se repetem em parts?
+
+- Qual tema não possui set?
+
+- Quantas peças são transparentes?
+
+- Quantas peças tal set possui?
+
+- Rank dos sets por quantidade de peças
+
+- Top 3 anos em que a LEGO produziu sets com maiores números de peças
+
+
+### Exemplos de consultas respondidas:
+
+
+![QUERY](https://i.ibb.co/dPrm26x/temas.jpg)
+![QUERY](https://i.ibb.co/W3JwGf7/set.jpg)
 
 ## Trello
 
 ![Trello](https://i.ibb.co/gwqs4Ht/trello.png)
-
-
-
-### Exemplos de querys respondidas:
-
-
-![QUERY](https://i.ibb.co/mTHfP2s/1.jpgg)
-![QUERY](https://i.ibb.co/L9NjzVQ/caio-1.jpg)
 
 ## Documentação:
 
