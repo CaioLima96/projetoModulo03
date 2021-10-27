@@ -5,7 +5,7 @@ ORDER BY num_parts desc
 limit 3;
 
 
-# Quais são e quantos sãos os sets de um "personagem"?
+#Quais e quantos sãos os sets de um "personagem"?
 select `name` as 'set_nome',count(name) as 'qtd_set' from sets group by `name`, set_num having `name` like '%mcdonald%' limit 0,10;
 
 
@@ -21,7 +21,7 @@ select concat( set_num, ' ', name ) as 'set_nome', num_parts as 'qtd_peças' fro
 select concat( set_num, ' ', name ) as 'set_nome', num_parts as 'qtd_peças' from sets where name like '%weetabix%' order by num_parts desc limit 0,20;
 
 
-# Qual o id e nome do set e seu tema e quantos de cada tipo temos no inventário?
+# Qual o id, nome e tema dos sets e quantos de cada tipo temos no inventário?
 select sets.set_num as 'set_id', sets.name as 'set_nome', sets.theme_id as 'tema_id', th.name as 'tema_nome', sum(inv_set.quantity) as 'qtd_set'
 	from sets inner join inventory_sets as inv_set
 	on sets.set_num = inv_set.inventory_id
