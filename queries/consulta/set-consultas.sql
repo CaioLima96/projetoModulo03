@@ -1,5 +1,8 @@
-#Qual ano produziram mais peças?
-SELECT name as nome , year as ano, num_parts as numero_de_partes FROM sets ORDER BY num_parts DESC limit 0,20;
+#Top 3 anos em que a LEGO produziu sets com maiores números de peças
+SELECT year as ano, num_parts as numero_de_partes
+FROM sets
+ORDER BY num_parts desc
+limit 3;
 
 
 # Quais são e quantos sãos os sets de um "personagem"?
@@ -32,10 +35,3 @@ select `name`as 'set_nome', num_parts as 'qtd_peças', CASE
 	WHEN num_parts >= 4000 THEN 'Sim'
     WHEN num_parts < 4000 THEN 'Não'
 end as 'True Set' from sets group by set_num order by num_parts desc limit 0,20;
-
-
-#Qual ano produziram mais peças? - repetido
-SELECT name as nome , year as ano, num_parts as numero_de_partes
-FROM sets
-ORDER BY num_parts 
-DESC
