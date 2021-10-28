@@ -1,4 +1,4 @@
-# Qual o id e nome do set e seu tema e quantos de cada tipo temos no inventário?
+# Qual o id, nome e tema dos sets e quantos de cada tipo temos no inventário?
 select sets.set_num as 'set_id', sets.name as 'set_nome', sets.theme_id as 'tema_id', th.name as 'tema_nome', sum(inv_set.quantity) as 'qtd_set'
 	from sets inner join inventory_sets as inv_set
 	on sets.set_num = inv_set.inventory_id

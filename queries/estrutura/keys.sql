@@ -1,4 +1,4 @@
-#Queries chaves primárias
+#Chaves primárias
 
 ALTER TABLE colors
   ADD PRIMARY KEY (id);
@@ -17,8 +17,10 @@ ALTER  TABLE part_categories
   
 ALTER  TABLE themes
   ADD PRIMARY KEY(id);  
-  
-#Queries chaves estrangeiras
+
+
+
+#Chaves estrangeiras
 
 ALTER TABLE inventory_sets ADD FOREIGN KEY (inventory_id) REFERENCES inventories(id);
 
